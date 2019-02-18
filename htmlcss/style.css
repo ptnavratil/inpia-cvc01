@@ -1,4 +1,79 @@
 
+body{
+	margin: 0;
+	background-color: #F5F5F5;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #4A4A4A;
+}
+
+header{
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #333;
+}
+
+header nav a{
+	display: inline-block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: underline;
+	font-size: 18px;
+}
+
+header nav a:hover{
+	background-color: white;
+	color: black;
+	transition: 1s;
+}
+
+#header-web-title{
+	color: white;
+	font-size: 30px;
+	margin: 10px;
+}
+
+#header-logo{
+	width: 400px;
+	margin-right: 20px;
+}
+
+#hero{
+	height: 100%;
+	background: url("./images/bg.jpg") no-repeat center;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+#hero h1{
+	font-size: 3em;
+}
+
+#hero div a{
+	background-color: white;
+	color: black;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+#hero div a:hover{
+	background-color: black;
+	color: white;
+	padding: 15px;
+	border-radius: 5px;
+	transition: 1s;
+}
+
 
 p{
 	font-family: verdana;
@@ -10,6 +85,3 @@ p{
 	font-family: "Bookman Old Style";
 }
 
-#header-logo{
-	width: 400px;
-}
