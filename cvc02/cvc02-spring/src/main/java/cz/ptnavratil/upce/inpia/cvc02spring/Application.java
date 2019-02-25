@@ -14,6 +14,8 @@ public class Application {
     @Autowired
     private EmailService emailService;
 
+    public MessageSender sender;
+
     @Autowired
     List<MessageSender> services;
 
@@ -23,9 +25,14 @@ public class Application {
     }
 
     public void processMessages(String msg, String recipient) {
+        if(msg == null) throw new IllegalArgumentException();
+
+        sender.sendMessage(msg,recipient);
+        /*
         for (MessageSender service : services) {
             service.sendMessage(msg, recipient);
         }
+        */
     }
 
     public static void main(String[] args) {
