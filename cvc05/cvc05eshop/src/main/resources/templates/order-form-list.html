@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam objednávek</title>
+</head>
+<body>
+
+<h2>Seznam objednávek</h2>
+<table>
+    <tr>
+        <th>Id objednávky</th>
+        <th>Stav</th>
+    </tr>
+    <tr th:each="orderForm : ${listOfOrderForms}">
+        <td th:text="${orderForm.id}">keyvalue</td>
+        <td th:text="${orderForm.orderState}">num</td>
+
+    </tr>
+</table>
+
+<a th:href="@{/}">Seznam produktů</a>
+
+</body>
+</html>

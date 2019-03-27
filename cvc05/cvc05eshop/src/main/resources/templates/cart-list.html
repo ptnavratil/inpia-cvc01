@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Obsah košíku</title>
+</head>
+<body>
+
+
+<h2>Obsah košíku</h2>
+<table>
+    <tr>
+        <th>Produkt</th>
+        <th>Počet</th>
+    </tr>
+    <tr th:each="product : ${productsInCart}">
+        <td th:text="${product.key.name}">keyvalue</td>
+        <td th:text="${product.value}">num</td>
+    </tr>
+</table>
+
+<a th:href="@{/cart/checkout}">Potvrdit objednávku</a>
+
+</body>
+</html>
